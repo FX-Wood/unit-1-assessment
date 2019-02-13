@@ -1,11 +1,7 @@
 var uiCount, uiPlus,  uiMinus, uiInput;
 
 function checkSign(n) {
-    if (n < 0) {
-        uiCount.style.color = 'red';
-    } else {
-        uiCount.style.color = 'black';
-    };
+    uiCount.style.color = n > 0 ? "black" : "red" ;
     return n;
 }
 function plus(e) {
