@@ -9,13 +9,10 @@ function checkSign(n) {
     return n;
 }
 function plus(e) {
-    uiCount.textContent = uiInput.value = checkSign(parseInt(uiCount.textContent) + 1);
+    uiCount.textContent = checkSign(parseInt(uiCount.textContent) + parseInt(uiInput.value));
 }
 function minus(e) {
-    uiCount.textContent = uiInput.value = checkSign(parseInt(uiCount.textContent) - 1);
-}
-function input(e) {
-    uiCount.textContent = checkSign(parseInt(e.target.value));
+    uiCount.textContent = checkSign(parseInt(uiCount.textContent) - parseInt(uiInput.value));
 }
 document.addEventListener('DOMContentLoaded', function(e) {
     uiCount = document.querySelector('.count');
@@ -25,5 +22,4 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     uiPlus.addEventListener('click', plus);
     uiMinus.addEventListener('click', minus);
-    uiInput.addEventListener('change', input);
 })
