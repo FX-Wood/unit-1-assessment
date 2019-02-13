@@ -30,7 +30,6 @@ main {
 .minus:focus,
 .input:focus {
     outline: none;
-    outline: none;
 }
 .input {
     box-sizing: border-box;
